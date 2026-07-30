@@ -1,0 +1,97 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
+*.local
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Playwright
+test-results/
+playwright-report/
+
+# Caches / build artefacts
+.cache/
+.turbo/
+.eslintcache
+coverage/
+*.tsbuildinfo
+tmp/
+blob-report/
+
+# Secrets, keys and credentials (never commit)
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+.env.production
+.dev.vars.*
+secrets.json
+service-account*.json
+client_secret*.json
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa*
+id_ed25519*
+.netrc
+.npmrc.local
+
+# QA reports (generated)
+reports/
+
+# Internal agent / tooling meta (never push to remote)
+.lovable/
+.workspace/
+.agents/
+.claude/
+.cursor/
+.windsurf/
+.aider*
+# NOTE: AGENTS.md is intentionally tracked — Lovable requires it for project sync
+CLAUDE.md
+.github/copilot-instructions.md
+
+# Local scratch / notes
+scratch/
+notes/
+*.local.md
+TODO.local*
+.history/
+
+# Extra build leftovers
+.vite/
+.output/
+
+# Duplicate lockfile (bun.lock is the source of truth)
+package-lock.json

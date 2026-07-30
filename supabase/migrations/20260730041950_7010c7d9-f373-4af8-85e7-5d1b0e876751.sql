@@ -1,0 +1,1 @@
+DELETE FROM public.csp_reports WHERE blocked_uri = 'https://evil.example.com/x.js';
