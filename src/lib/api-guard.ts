@@ -395,7 +395,7 @@ export async function guardPublicRequest(
   const endpoint = bucket ?? safePathname(request.url);
   const key = clientKey(request);
   const caller = callerDigest(clientKey(request));
-  // eslint-disable-next-line prefer-const
+  // eslint-disable-next-line prefer-const -- assigned conditionally in the branches below; TypeScript requires `let` here because the type-narrowed assignment happens after declaration
   let credentialSource: "header" | "query" | undefined;
   const finish = (outcome: GuardOutcome, response: Response | null) => {
     recordGuardEvent({

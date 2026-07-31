@@ -18,6 +18,7 @@ Trusted local recommendations from your society WhatsApp group, kept searchable 
 <a href="https://github.com/VIKAS9793/vouchlist"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="VouchList source on GitHub" /></a>
 <a href="https://github.com/VIKAS9793/vouchlist/actions/workflows/ci.yml"><img src="https://github.com/VIKAS9793/vouchlist/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI build status" /></a>
 <a href="https://github.com/VIKAS9793/vouchlist/actions/workflows/ci.yml"><img src="https://raw.githubusercontent.com/VIKAS9793/vouchlist/main/.github/badges/coverage.svg" alt="Unit test line coverage" /></a>
+<sub>Coverage scope: server-side API guard logic only — component and e2e coverage tracked separately, not yet in CI.</sub>
 
 </div>
 
@@ -38,6 +39,15 @@ Trusted local recommendations from your society WhatsApp group, kept searchable 
 <img src="https://img.shields.io/badge/Node-%E2%89%A520-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node 20 or newer" />
 
 </div>
+
+---
+
+> [!NOTE]
+> **Current phase: Phase 0 — Demand Validation.**
+> The live site at [vouchlist.lovable.app](https://vouchlist.lovable.app) is a **smoke-test landing page**, not the finished product. It exists to measure real interest — page visits, CTA clicks, waitlist signups, geographic distribution — *before* the WhatsApp bot is built. **No bot exists yet. No pilot has run. No society has used this.** If you are here to see a working bot, it has not been built yet by design.
+>
+> **This GitHub repository is a curated public mirror, not a runnable clone.**
+> The authoritative, deployed, and Lovable-synced codebase lives on [Lovable's](https://lovable.dev) own hosted infrastructure. This repo is a deliberately modified copy published for portfolio and code-review purposes. Cloning it will not produce a fully working local instance — missing backend credentials and environment config are expected and by design, not bugs.
 
 ---
 
@@ -217,6 +227,10 @@ npm run qa:perf:dashboard  # audit, then render reports/perf/dashboard.html for 
 npm run qa:perf:report     # re-render the dashboard from the last stored reports
 ```
 
+**CI-enforced (runs on every push/PR):** `lint`, `test:coverage`, `coverage:badge`, `build`.
+All `qa:*` scripts below are **manual pre-release gates**, not part of the automated CI pipeline.
+Run them locally before publishing a significant change; see [docs/engineering/QUALITY-GATES.md](https://github.com/VIKAS9793/vouchlist/blob/main/docs/engineering/QUALITY-GATES.md) for what each enforces.
+
 `qa:perf` stores each run under `reports/perf/`, and the dashboard turns those runs into a
 single page showing the Lighthouse score dial and the LCP bar against budget for every route,
 sorted slowest first, with a sparkline of the last twenty runs so regressions are obvious.
@@ -281,6 +295,8 @@ This is a product management case study and demand-validation project. The waitl
 is live to track genuine interest from society residents and admins before any product is built.
 No bot is currently in development or deployment. The case study documents the full product
 thinking — problem, personas, metrics, roadmap, and risks — as an independent PM portfolio exercise.
+
+**Build process:** the website was scaffolded with AI assistance via [Lovable](https://lovable.dev), a product-development platform. The author directed all architecture, product, and security decisions; reviewed and edited generated output; wrote the PRD, GTM plan, QA scripts, and security policy; and owns all product direction. The codebase is not hand-typed line by line, nor was it generated without review — the actual division of labor is: AI-assisted scaffolding under continuous human direction.
 
 Last reviewed: July 2026.
 

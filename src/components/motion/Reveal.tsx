@@ -1,4 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react-refresh/only-export-components -- shadcn/ui pattern: cva variant object is exported alongside the component from the same file; splitting them would break the shadcn component contract */
 import { motion, type Variants } from "motion/react";
 import type { ReactNode } from "react";
 

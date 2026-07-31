@@ -26,7 +26,7 @@ export function confirmationUrl(origin: string, token: string) {
   return `${origin}/waitlist/confirm?token=${encodeURIComponent(token)}`;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- Supabase admin client returned by createClient() has no exported type; `any` is the only practical escape hatch until Supabase ships a stable typed admin client
 type AdminClient = { from: (table: string) => any };
 
 /**

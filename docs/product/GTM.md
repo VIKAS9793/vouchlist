@@ -4,6 +4,37 @@ Companion to the [PRD & Case Study](./VouchList_PRD_CaseStudy.md) and [One-Pager
 
 ---
 
+## 0. Why a landing page first (Phase 0 rationale)
+
+Building the WhatsApp bot before validating demand is a classic build-trap. A functional bot requires WhatsApp Business API provisioning, NLP intent detection, database design, admin tooling, and community outreach — weeks of engineering investment that goes to zero if no one wants the underlying product.
+
+A smoke-test landing page inverts the risk: for the cost of a no-code prototype, it produces real behavioral signal — do people who read the pitch actually sign up? Do they fill in a real community and city, or leave fields blank? Which content pages get read? Where do visitors drop off? — before a single line of bot code is written.
+
+**What Phase 0 is measuring:**
+- Waitlist conversion rate (visitors → signups)
+- CTA click-through on the primary "Join waitlist" action
+- Content engagement (average session duration, pages per visit, which routes are read)
+- Geographic concentration (is demand clustered in the target corridor, or diffuse?)
+- Signup intent quality (% of signups with a real community and city vs. blank fields)
+
+**Go threshold (proceed to Phase 1 bot build):** see Phase 0 Success Criteria table in Section 0.1 below.
+**Kill/pivot threshold:** if demand signal is absent or scattered, revisit positioning or geography before committing engineering resources.
+
+### 0.1 Phase 0 Success Criteria
+
+The following table defines what a “successful” Phase 0 looks like using only data the current site instrumentation can produce. All figures are thresholds, not targets to optimize in isolation.
+
+| Metric | Definition | Threshold to proceed to Phase 1 | Source of truth |
+| ------ | ---------- | -------------------------------- | --------------- |
+| Waitlist conversion rate | Unique signups ÷ unique visitors | ≥ 5% | Server-side waitlist row count (primary); GA4 conversion event (secondary) |
+| CTA click-through | Clicks on "Join waitlist" CTA ÷ unique visitors | ≥ 15% | GA4 event |
+| Signup intent quality | % of signups with a non-blank community **and** city field | ≥ 60% | Server-side waitlist table |
+| Geographic concentration | % of signups from Andheri–Borivali corridor | ≥ 40% | Server-side waitlist table (city field) |
+| Content engagement | Average session duration | ≥ 60 seconds | GA4 engagement |
+| Minimum signal volume | Total unique signups | ≥ 30 | Server-side waitlist row count |
+
+> **Data integrity note (ENG-7):** GA4 events are client-side and spoofable by ad blockers or bots. Any go/no-go decision must cite the **server-side waitlist row count** as the primary source of truth for signup volume and quality. GA4 funnel data (CTR, session duration, drop-off) provides complementary context only. When Phase 0 concludes, a reconciliation between the GA4 signup count and the server-side count will be noted in `docs/product/PHASE_0_RESULTS.md` (to be created once real data exists — do not pre-fill).
+
 ## 1. Launch Objective
 
 Prove the core retrieval hypothesis — that structured, searchable recommendations beat scrolling WhatsApp history — in a small number of real residential WhatsApp groups, before any investment in scale, monetization, or a dedicated app.

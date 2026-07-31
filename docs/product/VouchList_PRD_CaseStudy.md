@@ -176,6 +176,8 @@ Building on top of WhatsApp trades platform control and monetization flexibility
 
 ## 8. Success Metrics
 
+> **Phase context:** the targets below are **planning assumptions for Phase 1 (the bot pilot)**, not measured results. No bot has been deployed, no pilot has run, and no society has used the product. These numbers are hypotheses to be tested once Phase 1 begins. See Phase 0 success criteria in [GTM.md](./GTM.md) for the metrics actually being collected right now.
+
 ### 8.1 North Star Metric
 
 > **Resolved Asks** — the number of local requests where a resident consulted or received a structured VouchList entry that satisfied the request, rather than re-asking live or leaving the group to search externally.
@@ -184,18 +186,20 @@ This metric is deliberately chosen over vanity engagement metrics (DAU, message 
 
 ### 8.2 Supporting metrics
 
-| Stage      | Metric                                                                         | Target (Pilot, 8 weeks) |
-| ---------- | ------------------------------------------------------------------------------ | ----------------------- |
-| Activation | % of invited societies whose admin opts in the group                           | ≥ 40%                   |
-| Engagement | % of recommendation-style messages successfully captured as structured entries | ≥ 50%                   |
-| Retention  | Median list queries per active group per week (week 4 vs. week 1)              | ≥ 1.5x growth           |
-| Quality    | % of entries flagged outdated or incorrect within 30 days                      | ≤ 10%                   |
-| Growth     | % of new entries contributed by members who joined after pilot launch          | ≥ 20% by week 8         |
+| Stage      | Metric                                                                         | Target (Pilot, 8 weeks) | Status |
+| ---------- | ------------------------------------------------------------------------------ | ----------------------- | ------ |
+| Activation | % of invited societies whose admin opts in the group                           | ≥ 40%                   | _Assumption — not yet measured_ |
+| Engagement | % of recommendation-style messages successfully captured as structured entries | ≥ 50%                   | _Assumption — not yet measured_ |
+| Retention  | Median list queries per active group per week (week 4 vs. week 1)              | ≥ 1.5x growth           | _Assumption — not yet measured_ |
+| Quality    | % of entries flagged outdated or incorrect within 30 days                      | ≤ 10%                   | _Assumption — not yet measured_ |
+| Growth     | % of new entries contributed by members who joined after pilot launch          | ≥ 20% by week 8         | _Assumption — not yet measured_ |
 
 ### 8.3 Guardrail metrics
 
-- **Group opt-out / bot-mute rate** — should not exceed 8%; a higher rate signals the bot is perceived as noisy or intrusive.
-- **Complaint or flagged-entry rate** — monitored to ensure structured entries do not degrade trust relative to organic recommendations.
+> These are Phase 1 planning targets. Neither has been measured yet.
+
+- **Group opt-out / bot-mute rate** — should not exceed 8%; a higher rate signals the bot is perceived as noisy or intrusive. _(Assumption — not yet measured)_
+- **Complaint or flagged-entry rate** — monitored to ensure structured entries do not degrade trust relative to organic recommendations. _(Assumption — not yet measured)_
 
 ---
 

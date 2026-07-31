@@ -64,7 +64,7 @@ async function bucketKey(scope: string, value: string) {
 }
 
 type AdminClient = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Supabase admin client returned by createClient() has no exported type; `any` is the only practical escape hatch until Supabase ships a stable typed admin client
   from: (table: string) => any;
 };
 

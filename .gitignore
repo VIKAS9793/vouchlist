@@ -78,7 +78,7 @@ reports/
 .cursor/
 .windsurf/
 .aider*
-# NOTE: AGENTS.md is intentionally tracked — Lovable requires it for project sync
+AGENTS.md
 CLAUDE.md
 .github/copilot-instructions.md
 
