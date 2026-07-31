@@ -82,12 +82,13 @@ AGENTS.md
 CLAUDE.md
 .github/copilot-instructions.md
 
-# Local scratch / notes
+# Local scratch / notes (internal planning — never push to remote)
 scratch/
 notes/
 *.local.md
 TODO.local*
 .history/
+UPLIFT_PLAN.md
 
 # Extra build leftovers
 .vite/
