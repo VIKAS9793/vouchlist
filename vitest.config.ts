@@ -16,7 +16,7 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text-summary", "json-summary", "lcov"],
       reportsDirectory: "coverage",
-      include: ["src/lib/api-guard*.ts"],
+      include: ["src/lib/api-guard*.ts", "src/lib/waitlist.server.ts"],
       exclude: ["src/**/*.test.ts", "src/**/*.d.ts"],
     },
   },
